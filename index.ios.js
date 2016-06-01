@@ -9,6 +9,8 @@ const Kindling = React.createClass({
 
   render() {
     return (
+      /*passing store to Provider so that internal components
+      can conveiently do dispatches */
       <Provider store={store}>
         <AppViewContainer />
       </Provider>

@@ -17,6 +17,8 @@ const NavigationTabView = React.createClass({
     return {shouldRenderHeader: true};
   },
 
+
+  /* TODO:  Add potential header with side bar icon above tab view*/
   renderHeader(props) {
     console.log('renderHeader', props);
     return (

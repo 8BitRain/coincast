@@ -7,10 +7,11 @@ export default connect(
     navigationState: state.get('navigationState').toJS()
   }),
   dispatch => ({
-    switchTab(index) {
+   switchTabDispatch(index) {
+      /* This dispatches a switch tab event with the index as payload  */
       dispatch(switchTab(index));
     },
-    onNavigate(action) {
+    onNavigateDispatch(action) {
       // The "back" and "BackAction" actions are fired from NavigationExperimental when
       // the user swipes the screen back or uses the software back button, respectively.
       // We handle these and dispatch our custom back action to our Redux stack.

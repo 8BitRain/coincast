@@ -14,8 +14,8 @@ const NavigationView = React.createClass({
   propTypes: {
     router: PropTypes.func.isRequired,
     navigationState: PropTypes.object.isRequired,
-    onNavigate: PropTypes.func.isRequired,
-    switchTab: PropTypes.func.isRequired
+    onNavigateDispatch: PropTypes.func.isRequired,
+    switchTabDispatch: PropTypes.func.isRequired
   },
 
   render() {
@@ -26,20 +26,21 @@ const NavigationView = React.createClass({
           <NavigationTabView
             router={AppRouter}
             navigationState={tabState}
-            onNavigate={this.props.onNavigate}
+            onNavigate={this.props.onNavigateDispatch}
           />
         </View>
       );
     });
 
     return (
+    
       <View style={styles.container}>
         {tabs}
         <TabBar
           height={TAB_BAR_HEIGHT}
           tabs={children}
           currentTabIndex={index}
-          switchTab={this.props.switchTab}
+          switchTab={this.props.switchTabDispatch}
         />
       </View>
     );
